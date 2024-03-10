@@ -4,7 +4,6 @@ from textnode import (
     TextNode,
     text_type_text,
     text_type_bold,
-    text_type_italic
 )
 
 
@@ -25,8 +24,8 @@ class TestTextNode(unittest.TestCase):
         self.assertNotEqual(node, node2)
 
     def test_eq_url(self):
-        node = TextNode("This is a text node", text_type_italic, "https://www.boot.dev")
-        node2 = TextNode("This is a text node", text_type_italic, "https://www.boot.dev")
+        node = TextNode("This is a text node", text_type_text, "https://www.boot.dev")
+        node2 = TextNode("This is a text node", text_type_text, "https://www.boot.dev")
         self.assertEqual(node, node2)
 
     def test_repr(self):
